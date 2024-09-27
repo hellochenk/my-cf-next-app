@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your base theme settings */
+@layer base {
+  html {
+    --color-primary: #4285f4;
+    --color-secondary: #34a853;
+    --color-buttons: #fbbc05;
+    --color-typography: #ea4335;
+    --ColorGreen200: #bbf7d0;
+    --ColorPurple800: #6b21a8;
+    --animationDuring: 6s;
+  }
+/* 
+  @import "../src/styles/themes/theme1.css"; 
+  @import "../src/styles/themes/theme2.css"; 
+  @import "../src/styles/themes/theme3.css";  */
+}
+
+@layer components {
+  .animation-text {
+    background-image: linear-gradient(
+      to bottom right, 
+      var(--color-primary), 
+      var(--ColorPurple800),
+      var(--color-secondary),
+      var(--ColorPurple800),
+      var(--color-buttons),
+      var(--ColorPurple800),
+      var(--color-typography),
+      var(--ColorPurple800),
+      var(--color-primary),
+      var(--ColorPurple800)
+    );
+    background-size: 300% 300%;
+    animation: homeText-transition var(--animationDuring) linear infinite;
+  }
+
+  @keyframes homeText-transition {
+    0% {
+      
+      background-position:100% 100%;
+    }
+    100% {
+      background-position:0% 0%;
+    }
+  }
+}
