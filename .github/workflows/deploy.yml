@@ -20,7 +20,7 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{secrets.ACCOUNT_ID}}
           projectName: ${{secrets.PROJECT_NAME}}
-          directory: out
+          directory: /out
           # Optional: Enable this if you want to have GitHub Deployments triggered
           # gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           # Optional: Switch what branch you are publishing to.
