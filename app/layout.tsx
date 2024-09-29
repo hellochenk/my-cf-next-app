@@ -29,6 +29,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <span className="hidden opacity-0">
+          {`timeStamp: ${process.env.TIME_STAMP}`}
+        </span>
       </body>
     </html>
   );
