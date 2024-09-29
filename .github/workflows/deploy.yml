@@ -14,6 +14,15 @@ jobs:
 
       # Run a build step here if your project requires
 
+      - name: Install dependencies
+        run: |
+          yarn install
+
+      - name: Build Next.js project
+        run: |
+          yarn build
+
+
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
